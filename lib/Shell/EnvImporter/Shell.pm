@@ -183,7 +183,7 @@ sub execute {
   my $s = IO::Select->new($fh{'STDOUT'}, $fh{'STDERR'});
 
   my $t0 = time;
-  my %buf;
+  my %buf = (STDOUT => '', STDERR => '');
   while (1) {
 
     my @ready = $s->can_read();

@@ -84,8 +84,8 @@ sub succeeded {
 ###############
   my $self = shift;
 
-  return $self->shell_status   == 0 and
-         $self->command_status == 0 and
+  return $self->shell_status   == 0 &&
+         $self->command_status == 0 &&
          $self->env_status     == 0;
 
 }
